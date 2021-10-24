@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin:0;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        
+    }
+    header{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        padding: 20px;
+        z-index: 999999;
+        
+    }
+   
+    header *{
+        display: flex;
+        flex-direction:row;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        
+    }
+    
+    header nav li{
+        padding-left: 20px;
+        padding-right: 20px;
+        color: white;
+    }
+    h1{
+        color: white;
+        font-size: 2.2em;
+    }
+    nav{
+        display:flex;
+        
+    }
+    nav *{
+        justify-content: space-between;
+    }
+    a{
+        display: block;
+        text-decoration: none;
+        color: white;
+        
+
+    }
+    a::first-letter{
+        color:rgb(212, 125, 53) ;
+    }
+    
+    .hello{
+        color: white;
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        font-size: 4em;
+    }
+    
+    
+
+    video{
+        z-index: -1;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        filter: brightness(75%);
+        background-color: black;
+        
+    }
+    .portfolio a{
+        
+        color: rgb(212, 125, 53);
+        text-transform: uppercase;
+        border: solid rgb(212, 125, 53) 3px;
+        text-align: center;
+        width: 60%;
+        font-size: 0.5em;
+    }
+    .dance{
+        position:absolute;
+        top:45%;
+        left: 60%;
+        opacity:0.8;
+        z-index:0;
+        border-radius: 20px;
+        transform:translate(-50%, -50%);
+        animation: slide 1s ease-in-out;
+        /*animation: rotate 30s alternate-reverse infinite;*/
+    }
+    @keyframes slide{
+        from{transform:translate(0%, 0%);opacity: 0;}
+        to
+        {transform:translate(-50%, -50%);}
+    }
+    .hit{
+        position:absolute;
+        top:60%;
+        left: 5%;
+        z-index:0;
+       border-radius: 20px;
+        z-index: 4;
+    }
+    .gym{
+        position:absolute;
+        height: 400px;
+        width: auto;
+        top:40%;
+        left: 81%;
+        z-index:0;
+        border-radius: 50px ;
+    }
+    iframe{
+        opacity: 0.8;
+    }
+    
+</style>
+
+<body>
+    
+   
+    <video width="200%" height="auto" autoplay muted loop>
+        <source src="jcvd.mp4">
+    </source>
+    </video>
+    
+    <header>
+        <div class="name"><h1 style="color:rgb(212, 125, 53);">J</h1><h1>CVD</h1></div>
+        <nav class="menu">
+        
+            <li><a href="#">home</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+        </nav>
+    </header>
+    <iframe class="dance" src="https://giphy.com/embed/vETeJc11yHAas" width="456" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/oB1vWgGPNDmYE" width="480" height="240" frameBorder="0" class="hit" allowFullScreen></iframe>
+    <iframe src="https://giphy.com/embed/piyQODl8H1SQE" width="324" height="480" frameBorder="0" class="gym" allowFullScreen></iframe>
+    <div class="hello">
+        Hello,<br>
+        My Name is
+    <p style="color:rgb(212, 125, 53);">Jean-Claude</p>
+    <div class="portfolio"><a href="#">Portfolio</a></div>
+    </div>
+    
+
+    
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            audio = new Audio();
+            audio.src = 'feeling.wav' || 'feeling.ogg';
+            audio.controls = false;
+            audio.volume = 0.2;
+            audio.loop = true;
+            audio.autoplay = true;
+    
+            console.log("DOM entièrement chargé et analysé");
+      });
+      
+        
+    </script>
+</body>
+</html>
